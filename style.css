@@ -1,0 +1,247 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Karla", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+
+body {
+  padding-top: 120px; /* Justera detta baserat på headerns höjd */
+
+}
+
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  background-color: white;
+  /*filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.2));*/
+
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  /*border: 2px solid red;*/
+}
+
+/* Logo */
+.logo {
+  height: 100px;
+  width: auto;
+  flex: 0 0 auto;
+  max-height: 100px;
+  margin-right: auto;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* Navbar */
+nav {
+  margin-left: auto;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav a {
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 4rem;
+  padding: 0.2rem 0; /* Minskat padding för att minska avstånd */
+  line-height: normal; /* Undvik extra avstånd från line-height */
+  display: inline-block;
+  vertical-align: middle; /* Justera vertikalt */
+  border-bottom: 3px solid transparent;
+  color: #4A5951;
+  transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #4A5951;
+  border-bottom: 3px solid #4A5951;
+}
+
+
+/*Hem-vy*/
+
+body.hem-vy {
+  background-image: url(Images/trä.png); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+/* Hero-section styling */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Fyller hela webbläsarens höjd */
+  padding: 20px;
+  gap: 40px; /* Avstånd mellan highlight-box och kattbild */
+}
+
+/* Highlight-box styling */
+.highlight-box {
+  background-color: #d3d8c8;
+  padding: 5%;
+  width: 30%;
+  max-width: 500px;
+  max-height: 80%;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Kattbild styling */
+.katt-bild {
+  width: 250px; /* Justera storleken här */
+  height: auto; /* Behåller proportionerna */
+  transform: scale(0.9); /* Förminskar ytterligare om nödvändigt */
+  width: 35%;
+  max-width: 600px;
+  max-height: 80%;
+  object-fit: contain; /* Gör att bilden håller sin proportion och inte går utanför */
+}
+
+/*Läs-Vy*/
+
+body.lasa-vy {
+  background-image: url(Images/trä.png); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh; /* Gör så att bakgrunden täcker hela höjden på sidan */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body.lasa-vy .container {
+  position: relative;
+  width: 100%; 
+  padding: 40px 10%;  
+  background-color: white; /* Sätt vit bakgrund för remsan */
+  box-sizing: border-box; /* Se till att padding räknas in i bredden */
+  z-index: 10; /* Ser till att texten är över remsan */
+}
+
+body.lasa-vy .container::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Höjd på den vita remsan */
+  background-color: white;
+  z-index: 0; /* Sätt remsan bakom texten */
+}
+
+body.lasa-vy .content {
+  position: relative;
+  z-index: 2;
+  overflow-y: auto;
+  max-height: calc(100vh - 100px); /* Begränsar scrollningen till området under remsan */
+  padding: 20px;
+  width: 100%;
+}
+
+
+
+
+/* Läs sektion */
+/* Gemensamma stilar för alla textsektioner */
+.text-section {
+  padding-top: 40px; /* Behåll padding-top för utrymme överst */
+  padding-bottom: 0px; /* Minska padding-bottom för att minska avståndet mellan textsektionerna */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px; /* Lägg till margin-bottom för att minska mellanrummet mellan sektionerna */
+}
+
+.text-content {
+  color: #d79d9d;
+  width: 60%;
+  padding: 1rem;
+  border: 2px solid red;
+}
+
+.text-content h2 {
+  color: #d79d9d;
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.text-content p {
+  line-height: 1.6;
+  font-size: 18px;
+  color: #4A5951;
+}
+
+.highlight-box {
+  background-color: #C0CBBE;
+  color: #4A5951;
+  padding: 5rem;
+  margin: 1rem auto;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.8;
+  width: 80%;
+  max-width: 800px; /* Begränsar bredden för att minska antal tecken per rad */
+}
+
+
+
+/* Container för informationstext och knapp på LADDA NED */
+.info-container {
+  text-align: center; /* Centrerar innehållet i containern */
+  padding: 2rem;
+}
+
+/* Stil för informationstexten */
+.info-text {
+  font-size: 24px; /* Justera textstorleken */
+  color: #333; /* Mörkgrå färg på texten */
+  margin-bottom: 2rem; /* Lägger till utrymme under texten så att knappen inte ligger för nära */
+}
+
+/* Stil för knappen */
+.download-button {
+  display: inline-block; /* Gör så att knappen beter sig som en inline-block */
+  padding: 1rem 2rem; /* Justerar storleken på knappen */
+  background-color: #b74b4b; /* Bakgrundsfärg på knappen */
+  color: white; /* Textfärgen på knappen */
+  font-size: 16px; /* Textstorlek på knappen */
+  text-decoration: none; /* Tar bort understrykning */
+  border-radius: 5px; /* Rundade hörn på knappen */
+  transition: background-color 0.3s ease; /* Smidig övergång för hover-effekten */
+}
+
+/* Hover-effekt på knappen */
+.download-button:hover {
+  background-color: #d79d9d; /* Ändrar bakgrundsfärgen när man hovrar över knappen */
+}
