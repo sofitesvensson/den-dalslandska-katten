@@ -79,7 +79,7 @@ nav a.active {
 /*Hem-vy*/
 
 body.hem-vy {
-  background-image: url(Images/trä.png); 
+  background-image: url(tra.png); 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -127,7 +127,7 @@ body.hem-vy {
 /*Läs-Vy*/
 
 body.lasa-vy {
-  background-image: url(Images/trä.png); 
+  background-image: url(tra.png); 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
